@@ -12,6 +12,12 @@ class Quill_ft extends EE_Fieldtype
         'version'   => '1.0.0'
     );
 
+    private $default_settings = array(
+        'theme'  => 'snow',
+        'placeholder' => '',
+        'field_wide' => true
+    );
+
     public function display_field($data)
     {
         return form_input(array(
