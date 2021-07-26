@@ -18,6 +18,10 @@ class Quill_ft extends EE_Fieldtype
         'field_wide' => true
     );
     
+    private $default_column = array(
+        'type' => 'TEXT'
+    );
+    
     /**
      * Constructor
      *
@@ -52,6 +56,50 @@ class Quill_ft extends EE_Fieldtype
         return $this->default_settings;
     }
 
+    /**
+     * Settings Modify Colum
+     * 
+     * Allows the specification of an array of fields to be added, modified or dropped when fields are created, edited or deleted.
+     * 
+     * {@inheritDoc}
+     * @see EE_Fieldtype::settings_modify_column()
+     */
+    public function settings_modify_column($data)
+    {
+        $id = $data['field_id'];
+        
+        return array(
+            "field_id_{$id}" => $this->default_column,
+            "field_len_{$id}" => array(
+                'type' => 'INT',
+                'constriant' => 10,
+                'default' => 0
+            ),
+            "field_ops_{$id}" => $this->default_column,
+        );
+    }
+    
+    /**
+     * Grid Settings Modify Colum
+     * 
+     * {@inheritDoc}
+     * @see EE_Fieldtype::grid_settings_modify_column()
+     */
+    public function grid_settings_modify_column($data)
+    {
+        $id = $data['col_id'];
+        
+        return array(
+            "col_id_{$id}" => $this->default_column,
+            "col_len_{$id}" => array(
+                'type' => 'INT',
+                'constriant' => 10,
+                'default' => 0
+            ),
+            "col_ops_{$id}" => $this->default_column,
+        );
+    }
+    
     /**
      * Display Field
      * 
