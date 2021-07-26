@@ -7,7 +7,13 @@ return array(
     'author' => 'High Altitude Technologies',
     'author_url' => 'https://high-altitude-tech.com',
     'namespace' => 'User\Addons\Quill',
-    'settings_exist' => true
+    'settings_exist' => true,
+    'fieldtypes' => array(
+        'quill' => array(
+            'name' => 'Quill',
+            'compatibility' => 'text'
+        )
+    )
 );
 // END OF
 
