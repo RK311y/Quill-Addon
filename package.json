@@ -1,0 +1,31 @@
+{
+  "name": "quill-addon",
+  "version": "1.0.0",
+  "description": "Quill.js ExpressionEngine custom fieldtype add-on",
+  "private": true,
+  "author": "River Kelly",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RK311y/Quill-Addon.git"
+  },
+  "keywords": [
+    "quill",
+    "quill.js",
+    "ExpressionEngine",
+    "addon",
+    "text",
+    "text-editor"
+  ],
+  "homepage": "https://github.com/RK311y/Quill-Addon#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "jquery": "^3.6.0",
+    "typescript": "^4.3.5"
+  }
+}
