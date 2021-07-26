@@ -1,0 +1,8 @@
+# Basics ===
+.DS_Store
+/node_modules/
+
+# Eclipse ===
+.buildpath
+.project
+.settings/
