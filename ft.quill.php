@@ -52,6 +52,13 @@ class Quill_ft extends EE_Fieldtype
         return $this->default_settings;
     }
 
+    /**
+     * Display Field
+     * 
+     * 
+     * {@inheritDoc}
+     * @see EE_Fieldtype::display_field()
+     */
     public function display_field($data)
     {
         return form_input(array(
