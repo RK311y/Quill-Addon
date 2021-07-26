@@ -101,6 +101,76 @@ class Quill_ft extends EE_Fieldtype
     }
     
     /**
+     * Display (Individual) Settings
+     * 
+     * {@inheritDoc}
+     * @see EE_Fieldtype::display_settings()
+     */
+    public function display_settings($data)
+    {
+        $values = array(
+            'theme' => isset($data['theme']) ? $data['theme'] : $this->default_settings['theme'],
+            'placeholder' => isset($data['placeholder']) ? $data['placeholder'] : $this->default_settings['placeholder'],
+        );
+        
+        $settings = array(
+            array(
+                'title' => 'theme',
+                'desc' => 'theme_desc',
+                'fields' => array(
+                    'theme' => array(
+                        'type' => 'dropdown',
+                        'value' => $values['theme'],
+                        'required' => true,
+                        'choices' => array(
+                            'snow' => 'Snow',
+                            'bubble' => 'Bubble'
+                        )
+                    )
+                )
+            ),
+            array(
+                'title' => 'placeholder',
+                'desc' => 'placeholder_desc',
+                'fields' => array(
+                    'placeholder' => array(
+                        'type' => 'textarea',
+                        'value' => $values['placeholder'],
+                        'placeholder' => 'Compose an epic...'
+                    )
+                )
+            ),
+        );
+        
+        
+        if ($this->content_type() == 'grid') {
+            return array('field_options' => $settings);
+        }
+        
+        return array('field_options_quill' => array(
+            'label' => 'field_options',
+            'group' => 'quill',
+            'settings' => $settings
+        ));
+    }
+    
+    /**
+     * Save (Individual) Settings
+     * 
+     * {@inheritDoc}
+     * @see EE_Fieldtype::save_settings()
+     */
+    public function save_settings($data)
+    {
+        return array(
+            'theme' => isset($data['theme']) ? $data['theme'] : $this->default_settings['theme'],
+            'placeholder' => isset($data['placeholder']) ? $data['placeholder'] : $this->default_settings['placeholder'],
+            'field_wide' => true
+        );
+    }
+    
+    
+    /**
      * Display Field
      * 
      * 
