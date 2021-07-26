@@ -17,6 +17,15 @@ class Quill_ft extends EE_Fieldtype
         'placeholder' => '',
         'field_wide' => true
     );
+    
+    /**
+     * Constructor
+     *
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     public function display_field($data)
     {
