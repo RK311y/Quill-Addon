@@ -26,6 +26,18 @@ class Quill_ft extends EE_Fieldtype
     {
         parent::__construct();
     }
+    
+    /**
+     * Accepts Content Type
+     *
+     *
+     * {@inheritDoc}
+     * @see EE_Fieldtype::accepts_content_type()
+     */
+    public function accepts_content_type($name)
+    {
+        return ($name == 'channel' || $name == 'grid' || $name == 'fluid_field');
+    }
 
     public function display_field($data)
     {
