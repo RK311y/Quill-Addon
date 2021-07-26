@@ -38,6 +38,19 @@ class Quill_ft extends EE_Fieldtype
     {
         return ($name == 'channel' || $name == 'grid' || $name == 'fluid_field');
     }
+    
+    /**
+     * Installation
+     *
+     * By returning an array from within install we can provide a default set of global settings.
+     *
+     * {@inheritDoc}
+     * @see EE_Fieldtype::install()
+     */
+    public function install()
+    {
+        return $this->default_settings;
+    }
 
     public function display_field($data)
     {
