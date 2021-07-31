@@ -1,0 +1,92 @@
+
+.quill-field {
+	/* padding-top: 10px; */
+	/* padding-bottom: 10px; */
+}
+
+/* 
+.quill-field .ql-container {
+	max-height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+} */
+
+
+/* input.quill-field-input {
+	display: none;
+} */
+
+/**
+ * Bubble
+ */
+.quill-field .ql-container.ql-bubble {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+/**
+ * Snow
+ */
+.quill-field .quill-editor-con .ql-toolbar.ql-snow {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.quill-field .quill-editor-con .ql-container.ql-snow {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/**
+ * editor con
+ */
+ .quill-editor-con {
+	background-color: white;
+	position: relative;
+}
+
+.quill-editor-con span:not(.icon-tool):before {
+	color: black;
+	font-size: inherit;
+	font-family: inherit;
+	margin-right: inherit;
+}
+
+/**
+ * toolbar
+ */
+.quill-field .ql-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+/**
+ * headings
+ */
+.quill-field .ql-editor h1 {
+	border-bottom: 0px;
+	color: black;
+	background-image: none;
+	margin: none;
+}
+
+.quill-field .ql-editor h2 {
+	border: none;
+	background-image: none;
+	background-color: rgba(0,0,0,0);
+	color: black;
+}
+
+/**
+ * other
+ */
+.quill-field .ql-editor strong {
+	font-style: normal;
+}
+.quill-field .ql-editor em {
+	display: inline-block;
+	font-style: italic;
+	font-size: inherit;
+	margin: 0px;
+}

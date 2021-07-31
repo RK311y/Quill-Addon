@@ -21,6 +21,8 @@
   ],
   "homepage": "https://github.com/RK311y/Quill-Addon#readme",
   "devDependencies": {
+    "@types/jquery": "^3.5.6",
+    "@types/quill": "^2.0.9",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.3.0",
