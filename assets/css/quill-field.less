@@ -1,0 +1,129 @@
+// quill-field.less
+
+.ql-editor-h1() {
+    h1 {
+        font-size: @ql-h1-font-size;
+        border-bottom: 0px;
+        color: black;
+        background-image: none;
+        margin: none;
+    }
+}
+
+.ql-editor-h2() {
+    h2 {
+        font-size: @ql-h2-font-size;
+        border: none;
+        background-image: none;
+        background-color: rgba(0, 0, 0, 0);
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        text-transform: none;
+    }
+}
+
+.ql-editor-h3() {
+    h3 {
+        font-size: @ql-h3-font-size;
+    }
+}
+
+.ql-editor-h4() {
+    h4 {
+        font-size: @ql-h4-font-size;
+    }
+}
+
+.ql-editor-h5() {
+    h5 {
+        font-size: @ql-h5-font-size;
+    }
+}
+
+.ql-editor-h6() {
+    h6 {
+        font-size: @ql-h6-font-size;
+    }
+}
+
+.ql-editor-strong() {
+    strong {
+        font-style: normal;
+    }
+}
+
+.ql-editor-em() {
+    em {
+        display: inline-block;
+        font-style: italic;
+        font-size: inherit;
+        margin: 0px;
+    }
+}
+
+.quill-field {
+
+    padding: 0px;
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+
+    .scrollbar();
+
+    >input.quill-input {
+        display: none;
+    }
+
+    >.quill-editor-container {
+        position: relative;
+        background-color: @ql-bg-color-field-background;
+
+        .ql-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+
+            &.ql-snow {
+                border-top-left-radius: @ql-border-radius;
+                border-top-right-radius: @ql-border-radius;
+                background-color: @ql-bg-color-snow-toolbar;
+            }
+
+            span:not(.icon-tool):before {
+                color: black;
+                font-size: inherit;
+                font-family: inherit;
+                margin-right: inherit;
+            }
+        }
+
+        >.quill-editor.ql-container {
+            max-height: 50vh;
+            overflow-y: auto;
+
+            &.ql-snow {
+                border-bottom-left-radius: @ql-border-radius;
+                border-bottom-right-radius: @ql-border-radius;
+            }
+
+            &.ql-bubble {
+                border: 1px solid #ccc;
+                border-radius: @ql-border-radius;
+            }
+
+            .ql-editor {
+                font-size: 1rem;
+                .ql-editor-strong();
+                .ql-editor-em();
+                .ql-editor-h1();
+                .ql-editor-h2();
+                .ql-editor-h3();
+                .ql-editor-h4();
+                .ql-editor-h5();
+                .ql-editor-h6();
+            }
+        }
+    }
+}
+
+// END OF
